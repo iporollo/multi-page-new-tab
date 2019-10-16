@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       'urls': urls
     }, () => {
       // Notify that we saved.
+      console.log('Entries saved');
     });
   });
 });

@@ -7,10 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     chrome.storage.sync.get(['urls'], (syncObj) => {
         if (syncObj.urls.length > 0) {
-            console.log(syncObj.urls)
             addFrames(iframeContainer, syncObj.urls);
         } else {
-            // show empty content state
+            document.body.innerHTML = `<div>Open popup & enter websites to display.</div>`
         }
     });
 });
