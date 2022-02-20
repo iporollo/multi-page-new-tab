@@ -1,5 +1,5 @@
 // https://github.com/niutech/x-frame-bypass
-document.write('<script id="x-frame-script" type="module" src="https://unpkg.com/x-frame-bypass"></script>');
+document.write('<script id="x-frame-script" type="module" src="https://unpkg.com/x-frame-bypass-mpnt"></script>');
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const addFrames = async (container, urls) => {
     const iframes = [];
     await urls.forEach(url => {
-        const iframe = `<iframe class="iframe" is="x-frame-bypass" src=${url}></iframe>`;
+        const iframe = `<iframe class="iframe" is="x-frame-bypass-mpnt" src=${url}></iframe>`;
         iframes.push(iframe);
     });
     container.innerHTML = iframes.join('');
